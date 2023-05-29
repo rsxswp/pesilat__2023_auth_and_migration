@@ -1,0 +1,39 @@
+ga bole null data nya
+harus ada nomor urut dari setiap kendaraan tersebut (untuk kode unik dari mobil tersebut)
+
+supaya run project ga error : 
+1. migrate
+2. run server
+3. seed
+
+membuat algoritma detail kendaraan yang tersedia apa saja
+- input add pemesanan harus singkron detailKendaraanId nya dengan kendaraanId
+
+
+const detailKendaraanInvalid = async (idPaketWisata, detailKendaraanId) => {
+  try {
+    const paketWisata = await PaketWisata.findAll({
+      where: {
+        id: idPaketWisata,
+      },
+      include: {
+        model: Kendaraan,
+        include: {
+          model: DetailKendaraan,
+        },
+      },
+    });
+
+    let kendaraanIdDitemukan = false;
+    for (const item of paketWisata[0].Kendaraan.DetailKendaraans) {
+      if (item.id === detailKendaraanId) {
+        kendaraanIdDitemukan = true;
+        break;
+      }
+    }
+
+    return kendaraanIdDitemukan;
+  } catch (e) {
+    throw e;
+  }
+};
