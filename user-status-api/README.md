@@ -11,6 +11,6 @@ Request yang membutuhkan auth dikirimkan dengan request header seperti ini :
 
 ```json
 {
-  "Authorization" : "Bearer Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluIiwibmFtZSI6ImFkbWluIiwiYWxhbWF0IjoiSmFrYXJ0YSIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjg1NDM2NjA2LCJleHAiOjE2ODU1MjMwMDZ9.tMNt89-ouGs6YPZgLxyE36D04o8GJyvvinZ3Wqrc2eo"
+  "x-access-token" : "Bearer Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluIiwibmFtZSI6ImFkbWluIiwiYWxhbWF0IjoiSmFrYXJ0YSIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjg1NDM2NjA2LCJleHAiOjE2ODU1MjMwMDZ9.tMNt89-ouGs6YPZgLxyE36D04o8GJyvvinZ3Wqrc2eo"
 }
 ```
