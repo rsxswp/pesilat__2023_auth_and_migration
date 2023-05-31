@@ -1,0 +1,551 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "travel-api",
+    "dateExported": "2023-05-31T00:39:38.554Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "8f06e5f0-00e9-4270-8393-29048432ec5b",
+            "name": "auth",
+            "containerId": "",
+            "created": "2023-05-26T10:06:23.049Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "c4c17590-20aa-48df-9750-a05e9a22f220",
+            "name": "kendaraan",
+            "containerId": "",
+            "created": "2023-05-26T10:06:23.050Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "2efb89e0-4d02-4996-98a5-f81e33b64ebe",
+            "name": "user",
+            "containerId": "8f06e5f0-00e9-4270-8393-29048432ec5b",
+            "created": "2023-05-27T08:21:52.389Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "bd524dbe-f55f-4c87-8d9e-f152f71204fc",
+            "name": "admin",
+            "containerId": "8f06e5f0-00e9-4270-8393-29048432ec5b",
+            "created": "2023-05-27T08:22:02.694Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "6e0d6b5d-bf15-44fa-a3f2-7eda41b17e47",
+            "name": "paket wisata",
+            "containerId": "",
+            "created": "2023-05-27T08:31:48.510Z",
+            "sortNum": 50000
+        },
+        {
+            "_id": "31fe723d-7f93-480b-9348-7eae5e7fd27c",
+            "name": "pemesanan",
+            "containerId": "",
+            "created": "2023-05-29T02:53:16.827Z",
+            "sortNum": 60000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "9608f9aa-3a7e-41d7-a770-27991df34d48",
+            "colId": "047256ae-41fa-4689-85b0-f14f328dba9c",
+            "containerId": "8f06e5f0-00e9-4270-8393-29048432ec5b",
+            "name": "sign up",
+            "url": "http://localhost:3000/api/auth/signup",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-05-26T10:06:23.050Z",
+            "modified": "2023-05-30T07:06:34.368Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "user2"
+                    },
+                    {
+                        "name": "name",
+                        "value": "user2"
+                    },
+                    {
+                        "name": "email",
+                        "value": "user2@gmail.com"
+                    },
+                    {
+                        "name": "password",
+                        "value": "12341234"
+                    },
+                    {
+                        "name": "roles[]",
+                        "value": "USER"
+                    },
+                    {
+                        "name": "alamat",
+                        "value": "Jl. Kotabaru",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "no_telp",
+                        "value": "085714148247",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "50951f90-b71e-44ed-8c47-981b4d4d2e8f",
+            "colId": "047256ae-41fa-4689-85b0-f14f328dba9c",
+            "containerId": "6e0d6b5d-bf15-44fa-a3f2-7eda41b17e47",
+            "name": "add Copy",
+            "url": "http://localhost:3000/api/paket-wisata",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-05-27T08:31:57.271Z",
+            "modified": "2023-05-27T08:45:04.239Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluIiwibmFtZSI6ImFkbWluIiwiYWxhbWF0IjoiSmFrYXJ0YSIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjg1MTc1OTU5LCJleHAiOjE2ODUyNjIzNTl9.XkI9YDpYXqcZuxAVaM5ejLc5sIw2wcpMMgkEZcrq8UU"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "nama_paket",
+                        "value": "Liburan Anak Sekolah"
+                    },
+                    {
+                        "name": "harga",
+                        "value": "1000000"
+                    },
+                    {
+                        "name": "durasi_hari",
+                        "value": "1"
+                    },
+                    {
+                        "name": "deskripsi",
+                        "value": "Ini adalah deskripsi"
+                    },
+                    {
+                        "name": "kendaraan_id",
+                        "value": "fa80a982-3df7-43b1-a070-20b7b5e0f43e"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "d8d68e58-fc17-434f-a8b0-d5dda325574a",
+            "colId": "047256ae-41fa-4689-85b0-f14f328dba9c",
+            "containerId": "c4c17590-20aa-48df-9750-a05e9a22f220",
+            "name": "add",
+            "url": "http://localhost:3000/api/kendaraan",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-05-26T10:06:23.052Z",
+            "modified": "2023-05-30T08:51:33.028Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluIiwibmFtZSI6ImFkbWluIiwiYWxhbWF0IjoiSmFrYXJ0YSIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjg1NDM2NjA2LCJleHAiOjE2ODU1MjMwMDZ9.tMNt89-ouGs6YPZgLxyE36D04o8GJyvvinZ3Wqrc2eo"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "merk",
+                        "value": "Suzuki"
+                    },
+                    {
+                        "name": "tipe",
+                        "value": "Civic"
+                    },
+                    {
+                        "name": "tahun",
+                        "value": "2018"
+                    },
+                    {
+                        "name": "tempat_duduk",
+                        "value": "drfrg"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "e164a407-98b0-429f-a267-6737c9a04e12",
+            "colId": "047256ae-41fa-4689-85b0-f14f328dba9c",
+            "containerId": "bd524dbe-f55f-4c87-8d9e-f152f71204fc",
+            "name": "sign in",
+            "url": "http://localhost:3000/api/auth/signin",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-05-27T08:23:57.870Z",
+            "modified": "2023-05-30T08:47:55.571Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "admin"
+                    },
+                    {
+                        "name": "password",
+                        "value": "12341234"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "a9fa3b66-6520-43ee-8cf2-daa2e770862c",
+            "colId": "047256ae-41fa-4689-85b0-f14f328dba9c",
+            "containerId": "c4c17590-20aa-48df-9750-a05e9a22f220",
+            "name": "get all",
+            "url": "http://localhost:3000/api/kendaraan",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-05-27T02:36:23.359Z",
+            "modified": "2023-05-30T07:36:09.694Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXIiLCJuYW1lIjoidXNlciIsImFsYW1hdCI6IkthcmF3YW5nIEtvdGEgSmwgTm8gMzQiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwiaWF0IjoxNjg1NDMyMTQ0LCJleHAiOjE2ODU1MTg1NDR9.XiKUIN3FTA3_pu2ybPyjpqionYHzFLGIVjduSuGxpPk",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "merk",
+                        "value": "Honda"
+                    },
+                    {
+                        "name": "tipe",
+                        "value": "Civic"
+                    },
+                    {
+                        "name": "tahun",
+                        "value": "2018"
+                    },
+                    {
+                        "name": "tempat_duduk",
+                        "value": "4"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "60f706c3-6489-49e3-992c-a1daa58c42fa",
+            "colId": "047256ae-41fa-4689-85b0-f14f328dba9c",
+            "containerId": "c4c17590-20aa-48df-9750-a05e9a22f220",
+            "name": "update",
+            "url": "http://localhost:3000/api/kendaraan/3048937a-2140-4bbe-bdfe-6c68bf87403b",
+            "method": "PUT",
+            "sortNum": 60000,
+            "created": "2023-05-27T03:45:04.682Z",
+            "modified": "2023-05-29T02:49:45.604Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluIiwibmFtZSI6ImFkbWluIiwiYWxhbWF0IjoiSmFrYXJ0YSIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjg1MzI2OTAzLCJleHAiOjE2ODU0MTMzMDN9.7eufqgt2QXhSyBDpPrdRrYmLXYpT3_6Oz1L2H88xVOY"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "merk",
+                        "value": "Honda Updated"
+                    },
+                    {
+                        "name": "tipe",
+                        "value": "Civic",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "tahun",
+                        "value": "2018"
+                    },
+                    {
+                        "name": "tempat_duduk",
+                        "value": "4"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "9320eed0-275c-4092-a14a-2af76b7cdeec",
+            "colId": "047256ae-41fa-4689-85b0-f14f328dba9c",
+            "containerId": "c4c17590-20aa-48df-9750-a05e9a22f220",
+            "name": "destroy",
+            "url": "http://localhost:3000/api/kendaraan/13f1a26d-f3c8-4bfc-b2a3-bbb15562b086",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2023-05-27T03:58:00.015Z",
+            "modified": "2023-05-27T04:07:12.618Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNhc3VrZS51Y2hpaGExIiwibmFtZSI6IlNhc3VrZSIsImFsYW1hdCI6bnVsbCwiZW1haWwiOiJzYXN1a2UxQGdtYWlsLmNvbSIsImlhdCI6MTY4NTE1ODYzNSwiZXhwIjoxNjg1MjQ1MDM1fQ.5uL-TlC2W2MO6yYdqv9TblPkMOG0qzioSa-jS8AkzLg"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "21c6fd3d-ac79-4168-a03d-e15ba08fb724",
+            "colId": "047256ae-41fa-4689-85b0-f14f328dba9c",
+            "containerId": "31fe723d-7f93-480b-9348-7eae5e7fd27c",
+            "name": "add",
+            "url": "http://localhost:3000/api/pemesanan",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2023-05-29T02:53:21.900Z",
+            "modified": "2023-05-30T08:55:58.942Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXIiLCJuYW1lIjoidXNlciIsImFsYW1hdCI6IkthcmF3YW5nIEtvdGEgSmwgTm8gMzQiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwiaWF0IjoxNjg1NDM2Nzk4LCJleHAiOjE2ODU1MjMxOTh9.ZlqbSeVSR-zxNZc4u47dAOUpsMqb1WL5l7X0AvBDVYo"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "tanggal_berangkat",
+                        "value": "2022-05-23"
+                    },
+                    {
+                        "name": "jumlah_orang",
+                        "value": "4"
+                    },
+                    {
+                        "name": "tujuan",
+                        "value": "tujuan"
+                    },
+                    {
+                        "name": "detail_kendaraan_id",
+                        "value": "58b4535c-308a-4c21-881d-b4a60e61a41d"
+                    },
+                    {
+                        "name": "paket_wisata_id",
+                        "value": "e92f8f0d-14d6-4db3-af98-38e2d6b1b9d0"
+                    },
+                    {
+                        "name": "lama_pesan_hari",
+                        "value": "2"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "19213bd7-8f0a-438e-9a6f-bb33be498330",
+            "colId": "047256ae-41fa-4689-85b0-f14f328dba9c",
+            "containerId": "2efb89e0-4d02-4996-98a5-f81e33b64ebe",
+            "name": "sign in",
+            "url": "http://localhost:3000/api/auth/signin",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2023-05-30T07:06:08.300Z",
+            "modified": "2023-05-30T08:47:31.626Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "user"
+                    },
+                    {
+                        "name": "password",
+                        "value": "12341234"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "1899c88e-f4bf-4937-a5a0-f8db8bf5de6d",
+            "colId": "047256ae-41fa-4689-85b0-f14f328dba9c",
+            "containerId": "31fe723d-7f93-480b-9348-7eae5e7fd27c",
+            "name": "get all",
+            "url": "http://localhost:3000/api/pemesanan",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2023-05-29T06:10:25.735Z",
+            "modified": "2023-05-30T07:21:04.037Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXIiLCJuYW1lIjoidXNlciIsImFsYW1hdCI6IkthcmF3YW5nIEtvdGEgSmwgTm8gMzQiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwiaWF0IjoxNjg1NDMxMjI0LCJleHAiOjE2ODU1MTc2MjR9.uwYKwtq0ed8KUk-yGpriQDU_qldw6w0AjVLYnP0JqXI"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "tanggal_pemesanan",
+                        "value": "2022-05-23",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "tanggal_berangkat",
+                        "value": "2022-05-23"
+                    },
+                    {
+                        "name": "jumlah_orang",
+                        "value": "4"
+                    },
+                    {
+                        "name": "tujuan",
+                        "value": "tujuan"
+                    },
+                    {
+                        "name": "paket_wisata_id",
+                        "value": "e92f8f0d-14d6-4db3-af98-38e2d6b1b9d0"
+                    },
+                    {
+                        "name": "detail_kendaraan_id",
+                        "value": "58b4535c-308a-4c21-881d-b4a60e61a41d"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "2f7bc4f2-059b-4aa6-a0d2-6dd614f224fb",
+            "colId": "047256ae-41fa-4689-85b0-f14f328dba9c",
+            "containerId": "31fe723d-7f93-480b-9348-7eae5e7fd27c",
+            "name": "update",
+            "url": "http://localhost:3000/api/pemesanan/7a1117ac-bd60-4825-a0ef-1d3eb56498fb",
+            "method": "PUT",
+            "sortNum": 100000,
+            "created": "2023-05-30T06:16:42.913Z",
+            "modified": "2023-05-30T07:06:48.528Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXIyIiwibmFtZSI6InVzZXIyIiwiYWxhbWF0IjpudWxsLCJlbWFpbCI6InVzZXIyQGdtYWlsLmNvbSIsImlhdCI6MTY4NTQzMDM5OCwiZXhwIjoxNjg1NTE2Nzk4fQ.89c_tS3riBxznjXxPormqThunljzy5Zp52AMNYlTxhA"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "tanggal_pemesanan",
+                        "value": "2022-05-23",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "tanggal_berangkat",
+                        "value": "2022-05-23"
+                    },
+                    {
+                        "name": "jumlah_orang",
+                        "value": "4"
+                    },
+                    {
+                        "name": "tujuan",
+                        "value": "tujuan"
+                    },
+                    {
+                        "name": "detail_kendaraan_id",
+                        "value": "58b4535c-308a-4c21-881d-b4a60e61a41d"
+                    },
+                    {
+                        "name": "paket_wisata_id",
+                        "value": "e92f8f0d-14d6-4db3-af98-38e2d6b1b9d0"
+                    },
+                    {
+                        "name": "lama_pesan_hari",
+                        "value": "3"
+                    },
+                    {
+                        "name": "status",
+                        "value": "selesai"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "ac73e57d-a28b-4f13-8306-33970af23f92",
+            "colId": "047256ae-41fa-4689-85b0-f14f328dba9c",
+            "containerId": "8f06e5f0-00e9-4270-8393-29048432ec5b",
+            "name": "sign in",
+            "url": "http://localhost:3000/api/auth/signin",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2023-05-27T08:22:33.516Z",
+            "modified": "2023-05-30T07:06:38.015Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "id",
+                        "value": "user2"
+                    },
+                    {
+                        "name": "password",
+                        "value": "12341234"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "1ffb627a-31be-419d-bc6e-8fcf4b9e474e",
+            "colId": "047256ae-41fa-4689-85b0-f14f328dba9c",
+            "containerId": "31fe723d-7f93-480b-9348-7eae5e7fd27c",
+            "name": "destroy",
+            "url": "http://localhost:3000/api/pemesanan/7a1117ac-bd60-4825-a0ef-1d3eb56498fb",
+            "method": "DELETE",
+            "sortNum": 110000,
+            "created": "2023-05-30T07:13:54.933Z",
+            "modified": "2023-05-30T07:20:38.899Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXIiLCJuYW1lIjoidXNlciIsImFsYW1hdCI6IkthcmF3YW5nIEtvdGEgSmwgTm8gMzQiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwiaWF0IjoxNjg1NDMxMjI0LCJleHAiOjE2ODU1MTc2MjR9.uwYKwtq0ed8KUk-yGpriQDU_qldw6w0AjVLYnP0JqXI"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
