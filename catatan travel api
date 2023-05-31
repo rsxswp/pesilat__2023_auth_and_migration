@@ -6,6 +6,8 @@ supaya run project ga error :
 2. run server
 3. seed
 
+atau jalankan : npm run "migrate:fresh --seed" 
+
 membuat algoritma detail kendaraan yang tersedia apa saja
 - input add pemesanan harus singkron detailKendaraanId nya dengan kendaraanId
 
